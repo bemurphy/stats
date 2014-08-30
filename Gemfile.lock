@@ -1,0 +1,59 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    armor (0.0.3)
+    bson (2.3.0)
+    connection_pool (2.0.0)
+    cuba (3.3.0)
+      rack
+    cuba-contrib (3.1.0)
+      cuba (~> 3.1)
+    daemons (1.1.9)
+    eventmachine (1.0.3)
+    hiredis (0.5.2)
+    moped (2.0.0)
+      bson (~> 2.2)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
+    mote (1.1.2)
+    msgpack (0.5.8)
+    nido (0.0.1)
+    ohm (2.0.1)
+      msgpack
+      nido
+      redic
+    ohm-contrib (2.0.0)
+      ohm (~> 2.0.0)
+    optionable (0.2.0)
+    rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
+    redic (1.1.1)
+      hiredis
+    scrivener (0.2.0)
+    scrivener_errors (0.0.6)
+    shield (2.1.0)
+      armor
+    shotgun (0.9)
+      rack (>= 1.0)
+    thin (1.6.2)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba
+  cuba-contrib
+  moped (~> 2.0.0)
+  mote
+  ohm
+  ohm-contrib
+  rack-protection
+  scrivener
+  scrivener_errors
+  shield
+  shotgun
+  thin
