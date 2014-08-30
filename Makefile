@@ -9,7 +9,7 @@ CSS_DIR    = $(STATIC_DIR)/css
 JS_DIR     = $(STATIC_DIR)/js
 DIST       = $(STATIC_DIR)/$(SUB_DIR)
 
-.PHONY : clean all watch
+.PHONY : clean all watch test
 
 all: directories compile_assets css_lint signature_assets
 
@@ -51,3 +51,5 @@ signature_assets:
 	rm -f assets.json
 	@echo $(MANIFEST) > assets.json
 
+test:
+	cutest test/**/*.rb

@@ -38,18 +38,18 @@ Cuba.define do
   persist_session!
 
   on get, "track" do
+    id   = req.params['id']
     time = Time.now.utc
-    r = rand(0)
-    if r < 0.3
-      time -= 3601
-    elsif r > 0.7
-      time += 3601
-    end
+    # r = rand(0)
+    # if r < 0.3
+    #   time -= 3601
+    # elsif r > 0.7
+    #   time += 3601
+    # end
 
-    fake_id = 12
     unique = rand(0) < 0.3
 
-    hit = Stats::Hit.new(time, fake_id, unique)
+    hit = Stats::Hit.new(time, id, unique)
     hit.record
 
     res.write "ok"
